@@ -1,0 +1,8 @@
+:host {
+  display: block;
+  float: left;
+}
+
+.active {
+  background-color: rgb(162, 210, 230);
+}

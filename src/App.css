@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+.columnFacet {
+  width: 35%;
+  float: left;
+}
+
+.columnResultList {
+  width: 60%;
+  float: right;
+}
+
+.resultPerPageClass {
+  width: 50%;
+  float: left;
+}
+
+.pagerClass {
+  width: 50%;
+  float: right;
+}
+
+.querySummaryClass {
+  width: 100%;
+  float: inherit;
+}
+.resultListClass {
+  width: 100%;
+  float: inherit;
+}
