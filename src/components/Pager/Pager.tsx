@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 import { engine } from "../../engine";
 import { Pager, PagerState, buildPager } from "@coveo/headless";
 import Pagination from "@material-ui/lab/Pagination";

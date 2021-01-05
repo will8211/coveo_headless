@@ -8,8 +8,8 @@ import {
   SearchBox,
   SearchBoxOptions
 } from "@coveo/headless";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import SearchIcon from "@material-ui/icons/Search";
+//import InputAdornment from "@material-ui/core/InputAdornment";
+//import SearchIcon from "@material-ui/icons/Search";
 import parse from "autosuggest-highlight/parse";
 import match from "autosuggest-highlight/match";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox, { CheckboxProps } from "@material-ui/core/Checkbox";
+import Checkbox /*, { CheckboxProps }*/ from "@material-ui/core/Checkbox";
 import Button from "@material-ui/core/Button";
 
 import {
@@ -123,7 +123,7 @@ class DynamicFacet extends React.Component<ICheckboxControlProps> {
     }
   }
   private selectOnFocus(e: any) {
-    let value = (e.target as HTMLButtonElement).value;
+    // let value = (e.target as HTMLButtonElement).value;
     this.headlessFacet.facetSearch.select(e);
   }
   private facetSearchBox() {

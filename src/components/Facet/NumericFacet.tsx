@@ -1,7 +1,7 @@
 import React from "react";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox, { CheckboxProps } from "@material-ui/core/Checkbox";
+import Checkbox /*, { CheckboxProps } */ from "@material-ui/core/Checkbox";
 import {
   buildNumericFacet,
   buildNumericRange,

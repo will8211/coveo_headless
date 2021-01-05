@@ -4,7 +4,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import { buildTab, Tab as TabCoveo, TabState, TabProps } from "@coveo/headless";
 import { engine } from "../../engine";
-import { makeStyles, createStyles } from "@material-ui/core/styles";
+import { makeStyles, /* createStyles */ } from "@material-ui/core/styles";
 
 interface ITabControlProps {
   tabExpression: string;

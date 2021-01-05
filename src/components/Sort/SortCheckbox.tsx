@@ -1,13 +1,18 @@
 import "./Sort.css";
-import React, { SyntheticEvent } from "react";
+import React /*, { SyntheticEvent } */ from "react";
 import { engine } from "../../engine";
-import { Sort, SortState, SortInitialState, buildSort } from "@coveo/headless";
+import { 
+  Sort, 
+  SortState, 
+  // SortInitialState, 
+  buildSort 
+} from "@coveo/headless";
 import FormControl from "@material-ui/core/FormControl";
 import { generateSortCriterion, SortOption } from "./Sort";
 
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
-import Radio, { RadioProps } from "@material-ui/core/Radio";
+import Radio /*, { RadioProps } */ from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormLabel from "@material-ui/core/FormLabel";
@@ -77,9 +82,9 @@ export default class ReactSortCheckbox extends React.Component {
 
   constructor(props) {
     super(props);
-    const initialState: SortInitialState = {
-      criterion: generateSortCriterion(SortOption.Relevance)
-    };
+    // const initialState: SortInitialState = {
+    //   criterion: generateSortCriterion(SortOption.Relevance)
+    // };
     this.headlessSort = buildSort(engine, {});
     this.state = this.headlessSort.state;
   }

@@ -12,7 +12,7 @@ import ReactSort from "./components/Sort/Sort";
 import ReactSortCheckbox from "./components/Sort/SortCheckbox";
 import ReactPager from "./components/Pager/Pager";
 import ReactResultPerPage from "./components/ResultPerPage/ResultPerPage";
-import Pager2 from "./components/Pager/Pager2";
+// import Pager2 from "./components/Pager/Pager2";
 import ReactQuerySummary from "./components/QuerySummary/QuerySummary";
 import AllNumericFacets from "./components/Facet/NumericFacet";
 import AllCategoryFacet from "./components/Facet/CategoryFacet";

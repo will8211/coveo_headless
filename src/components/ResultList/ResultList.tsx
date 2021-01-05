@@ -7,7 +7,7 @@ import {
   buildResultList,
   ResultList,
   ResultListState,
-  AnalyticsActions,
+  //AnalyticsActions,
   ResultAnalyticsActions,
   ResultTemplatesHelpers,
   ResultTemplatesManager,
