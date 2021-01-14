@@ -1,9 +1,8 @@
+import "./Pager.css";
 import React from "react";
-// import { makeStyles } from "@material-ui/core/styles";
 import { engine } from "../../engine";
 import { Pager, PagerState, buildPager } from "@coveo/headless";
 import Pagination from "@material-ui/lab/Pagination";
-import "./Pager.css";
 import { generateRandomString } from "../Facet/CategoryFacet";
 
 export default class HeadlessPager extends React.Component {

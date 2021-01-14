@@ -11,6 +11,7 @@ export default class ReadtDidYouMean extends React.Component {
     this.headlessDidYouMean = buildDidYouMean(engine);
     this.state = this.headlessDidYouMean.state;
   }
+
   componentDidMount() {
     this.headlessDidYouMean.subscribe(() => this.updateState());
   }
@@ -22,20 +23,14 @@ export default class ReadtDidYouMean extends React.Component {
   private renderQueryCorrectionTrue() {
     return (
       <div>
-        <div>
-          <b>DidYouMean activated. </b>
-        </div>
         Text was corrected to: <b>{this.state.wasCorrectedTo}</b>
       </div>
     );
   }
+
   render() {
     if (this.state.hasQueryCorrection === false) {
-      return (
-        <div>
-          <b>No Query Correction</b>
-        </div>
-      );
+      return (null);
     } else {
       return <div>{this.renderQueryCorrectionTrue()}</div>;
     }

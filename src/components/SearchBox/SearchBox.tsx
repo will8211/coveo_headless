@@ -63,8 +63,7 @@ export default class ReactSearchBox extends React.Component {
           renderInput={(params) => (
             <TextField
               {...params}
-              placeholder="Search"
-              label="freeSolo"
+              label="Search"
               margin="normal"
               variant="outlined"
             />

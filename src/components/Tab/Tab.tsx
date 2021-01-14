@@ -1,10 +1,10 @@
+import "./Tab.css";
 import React from "react";
-import Paper from "@material-ui/core/Paper";
+import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import { buildTab, Tab as TabCoveo, TabState, TabProps } from "@coveo/headless";
 import { engine } from "../../engine";
-import { makeStyles, /* createStyles */ } from "@material-ui/core/styles";
 
 interface ITabControlProps {
   tabExpression: string;
@@ -43,7 +43,7 @@ class ReactTabs extends React.Component<ITabControlProps> {
       <Tab
         value={this.props.label}
         label={this.props.label}
-        className={this.state.isActive ? "active" : ""}
+        className={this.state.isActive ? "activeTab" : ""}
         onFocus={(e) => {
           this.handleChange(e);
         }}
@@ -51,27 +51,18 @@ class ReactTabs extends React.Component<ITabControlProps> {
     );
   }
 }
-const useStyles = makeStyles({
-  root: {
-    flexGrow: 1
-  }
-});
-function StyledPaper(props: any) {
-  const classes = useStyles();
-  return <Paper className={classes.root} {...props}></Paper>;
-}
+
 
 export default class AllTabs extends React.Component {
   render() {
     return (
-      <StyledPaper square>
-        <Tabs indicatorColor="primary" textColor="primary">
-          <ReactTabs tabExpression="" label="All" defaultTab={true} />
-          <ReactTabs tabExpression="@filetype==pdf" label="PDF" />
-          <ReactTabs tabExpression="@filetype==txt" label="Txt" />
-          <ReactTabs tabExpression="@filetype==noresult" label="NoResult" />
+      <AppBar color="inherit" position="static" style={{ alignItems: 'center' }}>
+        <Tabs indicatorColor="secondary" textColor="primary">
+          <ReactTabs tabExpression="" label="All Content" defaultTab={true} />
+          <ReactTabs tabExpression="@filetype==youtubevideo" label="Youtube" />
+          <ReactTabs tabExpression="@sfid" label="Salesforce" />
         </Tabs>
-      </StyledPaper>
+      </AppBar>
     );
   }
 }

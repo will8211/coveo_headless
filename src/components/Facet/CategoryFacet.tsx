@@ -247,6 +247,7 @@ class CategoryFacetHeadless extends React.Component {
           <TextField
             {...params}
             label="Search Facet"
+            size="small"
             margin="normal"
             variant="outlined"
           />

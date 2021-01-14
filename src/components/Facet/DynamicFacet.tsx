@@ -2,7 +2,7 @@ import React from "react";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox /*, { CheckboxProps }*/ from "@material-ui/core/Checkbox";
-import Button from "@material-ui/core/Button";
+import Link from "@material-ui/core/Link";
 
 import {
   buildFacet,
@@ -75,14 +75,16 @@ class DynamicFacet extends React.Component<ICheckboxControlProps> {
   private showMoreFacetButton() {
     if (this.state.canShowMoreValues) {
       return (
-        <Button
-          variant="contained"
+        <div>
+        <span></span>
+        <Link
           onClick={() => {
             this.headlessFacet.showMoreValues();
           }}
         >
-          Show more Facets
-        </Button>
+          + Show more Facets
+        </Link>
+        </div>
       );
     } else {
       return null;
@@ -92,14 +94,13 @@ class DynamicFacet extends React.Component<ICheckboxControlProps> {
   private showLessFacetButton() {
     if (this.state.canShowLessValues) {
       return (
-        <Button
-          variant="contained"
+        <Link
           onClick={() => {
             this.headlessFacet.showLessValues();
           }}
         >
-          Show Less Facets
-        </Button>
+          - Show Less Facets
+        </Link>
       );
     } else {
       return null;
@@ -109,14 +110,13 @@ class DynamicFacet extends React.Component<ICheckboxControlProps> {
   private desellectAllFacet() {
     if (this.state.hasActiveValues) {
       return (
-        <Button
-          variant="contained"
+        <Link
           onClick={() => {
             this.headlessFacet.deselectAll();
           }}
         >
-          Reset
-        </Button>
+          Clear
+        </Link>
       );
     } else {
       return null;
@@ -127,6 +127,7 @@ class DynamicFacet extends React.Component<ICheckboxControlProps> {
     this.headlessFacet.facetSearch.select(e);
   }
   private facetSearchBox() {
+    if (this.state.canShowMoreValues) {
     return (
       <Autocomplete
         id="facetSearch"
@@ -148,12 +149,13 @@ class DynamicFacet extends React.Component<ICheckboxControlProps> {
           <TextField
             {...params}
             label="Search Facet"
+            size="small"
             margin="normal"
             variant="outlined"
           />
         )}
       />
-    );
+    )};
   }
 
   private buildFacetValue(item: FacetValue) {
@@ -207,11 +209,10 @@ class DynamicFacet extends React.Component<ICheckboxControlProps> {
   render() {
     return (
       <div>
-        <h3>StandardFacet - {this.props.facetId}</h3>
-        {this.facetSortDropdown()}
-        {this.desellectAllFacet()}
+        <h3>{this.props.facetId}</h3>
         {this.facetSearchBox()}
-        <FormGroup row> {this.allFacetValues()}</FormGroup>
+        {this.desellectAllFacet()}
+        <FormGroup> {this.allFacetValues()}</FormGroup>
         {this.showMoreFacetButton()}
         {this.showLessFacetButton()}
       </div>

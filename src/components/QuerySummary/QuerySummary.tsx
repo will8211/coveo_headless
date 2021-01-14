@@ -29,9 +29,17 @@ export default class ReactQuerySummary extends React.Component {
 
   render() {
     if (!this.state.hasResults) {
-      return this.renderNoResults();
+      return (
+        <span className="results">
+          {this.renderNoResults()}
+        </span>
+      );
     }
-    return this.renderHasResults();
+    return (
+      <span className="results">
+        {this.renderHasResults()}
+      </span>
+    );
   }
 
   private renderNoResults() {

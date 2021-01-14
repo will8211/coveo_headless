@@ -1,7 +1,6 @@
 import React from "react";
 import { engine } from "../../engine";
 import {
-  // Breadcrumb,
   BreadcrumbManager,
   BreadcrumbManagerState,
   buildBreadcrumbManager
@@ -9,7 +8,8 @@ import {
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import { generateRandomString } from "../Facet/CategoryFacet";
-import Button from "@material-ui/core/Button";
+import Link from "@material-ui/core/Link";
+import Grid from '@material-ui/core/Grid';
 
 export enum FacetType {
   Facet = "facetBreadcrumbs",
@@ -46,11 +46,14 @@ export default class ReactBreadcrumb extends React.Component {
     return facetState.map((item: any) => {
       return (
         <div key={generateRandomString()}>
-          <b>{item.field.toUpperCase()} </b>
+          <b>{this.capitalise(item.field)} </b>
           {this.buildListCheckboxBreadcrumb(facetType, item)}
         </div>
       );
     });
+  }
+  private capitalise(str: string) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
   private buildListCheckboxBreadcrumb(facetType: string, items: any) {
@@ -97,7 +100,7 @@ export default class ReactBreadcrumb extends React.Component {
 
       return (
         <div key={generateRandomString()}>
-          <b>{item.field.toUpperCase()} </b>
+          <b>{item.field.toLowerCase()} </b>
           <FormControlLabel
             key={nodeIdRandom}
             control={
@@ -119,14 +122,13 @@ export default class ReactBreadcrumb extends React.Component {
   private desellectAll() {
     return (
       <div>
-        <Button
-          variant="contained"
+        <Link
           onClick={() => {
             this.headlessBreadCrumb.deselectAll();
           }}
         >
-          Reset Breadcrumb
-        </Button>
+          Clear all filters
+        </Link>
       </div>
     );
   }
@@ -137,21 +139,24 @@ export default class ReactBreadcrumb extends React.Component {
       this.state.dateFacetBreadcrumbs.length !== 0 ||
       this.state.numericFacetBreadcrumbs.length !== 0;
     if (!isBreadcrumbActivate) {
-      return (
-        <div>
-          <b>BreadCrumb Not Activated</b>
-        </div>
-      );
+      return (null);
     } else {
       return (
         <div>
-          <b>BREADCRUMB ACTIVATED</b>
-          {this.desellectAll()}
-          {this.generateFacetBreadcrumbs(FacetType.Facet)}
-          {this.generateFacetBreadcrumbs(FacetType.NumeroicFacet)}
-          {this.generateFacetBreadcrumbs(FacetType.DateFacet)}
-          {this.generateCategoryFacetBreadcrumbs()}
+          <Grid container justify="space-between">
+            <Grid item>
+              {this.generateFacetBreadcrumbs(FacetType.Facet)}
+              {this.generateFacetBreadcrumbs(FacetType.NumeroicFacet)}
+              {this.generateFacetBreadcrumbs(FacetType.DateFacet)}
+              {this.generateCategoryFacetBreadcrumbs()}
+            </Grid>
+            <Grid item>
+              {this.desellectAll()}
+            </Grid>
+          </Grid>
+          <hr />
         </div>
+
       );
     }
   }

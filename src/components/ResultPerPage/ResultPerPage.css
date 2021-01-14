@@ -4,5 +4,10 @@
 }
 
 .active {
-  background-color: rgb(162, 210, 230);
+  background-color: rgba(63, 81, 181, 0.15);
+  margin: 5px;
+}
+
+.MuiButtonGroup-root {
+  margin: 3px
 }

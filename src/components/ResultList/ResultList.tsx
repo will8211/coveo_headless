@@ -105,20 +105,6 @@ export default class ReactResultList extends React.Component {
     return (
       <div>
         {this.results()}
-        <ButtonGroup
-          color="primary"
-          aria-label="outlined primary button group"
-          key={generateRandomString()}
-        >
-          <Button
-            key="FetchMoreResult"
-            onClick={() => {
-              this.headlessResultList.fetchMoreResults();
-            }}
-          >
-            More Results
-          </Button>
-        </ButtonGroup>
       </div>
     );
   }

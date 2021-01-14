@@ -1,3 +1,13 @@
+body {
+  font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+  color: #313a45;
+}
+
+h3 {
+  color: #004990;
+  /* text-transform: uppercase; */
+}
+
 .App {
   text-align: center;
 }
@@ -65,3 +75,26 @@
   width: 100%;
   float: inherit;
 }
+.MuiPaper-root {
+  margin: 12px 0;
+  color: #313a45 !important;
+}
+.MuiTypography-body1 {
+  font-size: .8rem !important;
+  font-weight: 300 !important;
+}
+
+.MuiTypography-h5 {
+  font-size: 1.1rem !important;
+  color: #004990;
+}
+
+.MuiPaginationItem-root {
+  margin: 1px 3px !important;
+}
+
+.MuiSelect-root {
+  background: #ffffff !important;
+}
+
+

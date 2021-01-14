@@ -1,3 +1,6 @@
 .sortCheckBoxPadding {
   padding: 20px;
 }
+.sortLabel {
+  font-size: small !important;
+}

@@ -112,8 +112,8 @@ export default class ReactSortCheckbox extends React.Component {
   render() {
     this.defaultValue();
     return (
-      <FormControl component="fieldset" className="sortCheckBoxPadding">
-        <FormLabel component="legend">Sort Radio check</FormLabel>
+      <FormControl component="fieldset"  className="sortCheckBoxPadding">
+        <FormLabel component="legend" className="sortLabel">Sort</FormLabel>
 
         <RadioGroup
           row
@@ -128,24 +128,14 @@ export default class ReactSortCheckbox extends React.Component {
             label="Relevance"
           />
           <FormControlLabel
-            value={SortOption.Date}
+            value={SortOption.Newest}
             control={<StyledRadio />}
-            label="Date"
+            label="Newest"
           />
           <FormControlLabel
-            value={SortOption.Size}
+            value={SortOption.Oldest}
             control={<StyledRadio />}
-            label="Size"
-          />
-          <FormControlLabel
-            value={SortOption.QRE}
-            control={<StyledRadio />}
-            label="QRE"
-          />
-          <FormControlLabel
-            value={SortOption.NoSort}
-            control={<StyledRadio />}
-            label="NoSort"
+            label="Oldest"
           />
         </RadioGroup>
       </FormControl>

@@ -8,18 +8,19 @@ import AllFacets from "./components/Facet/DynamicFacet";
 import AllDateFacets from "./components/Facet/DateFacet";
 import ReactSearchBox from "./components/SearchBox/SearchBox";
 import ReactResultList from "./components/ResultList/ResultList";
-import ReactSort from "./components/Sort/Sort";
 import ReactSortCheckbox from "./components/Sort/SortCheckbox";
 import ReactPager from "./components/Pager/Pager";
 import ReactResultPerPage from "./components/ResultPerPage/ResultPerPage";
-// import Pager2 from "./components/Pager/Pager2";
 import ReactQuerySummary from "./components/QuerySummary/QuerySummary";
 import AllNumericFacets from "./components/Facet/NumericFacet";
 import AllCategoryFacet from "./components/Facet/CategoryFacet";
 import ReactQueryError from "./components/QueryError/QueryError";
 import ReactDidYouMean from "./components/DidYouMean/DidYouMean";
 import ReactBreadCrumb from "./components/Breadcrumb/Breadcrumb";
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 import ReactHistory from "./components/History/History";
+
 
 
 export default class App extends React.Component {
@@ -35,48 +36,54 @@ export default class App extends React.Component {
     return (
       <React.Fragment>
         <div className="row">
-          <ReactHistory />
-        </div>
-        <div className="row">
           <AllTabs />
         </div>
-        <div className="row">
-          <ReactSearchBox />
-        </div>
-        <div className="row">
-          <ReactSort />
-          <ReactSortCheckbox />
-        </div>
-        <div className="row">
-          <ReactBreadCrumb />
-        </div>
-
-        <div className="row">
-          <div className="columnFacet">
-            <ReactFacetManager>
-              <AllFacets />
-              <AllCategoryFacet />
-              <AllNumericFacets />
-              <AllDateFacets />
-            </ReactFacetManager>
-          </div>
-          <div className="columnResultList">
-            <div className="pagerClass">
-              <ReactPager />
-            </div>
-            <div className="resultPerPageClass">
-              <ReactResultPerPage />
-            </div>
-            <div className="querySummaryClass">
+        <Container>
+          <Container maxWidth="md">
+            <div className="row">
+              <ReactSearchBox />
               <ReactDidYouMean />
-              <ReactQueryError />
-              <ReactQuerySummary />
             </div>
-            <div className="resultListClass">
-              <ReactResultList />
-            </div>
-          </div>
-        </div>
+          </Container>
+
+          <Grid container className="row">
+
+            <Grid item xs={3} className="columnFacet">
+              <ReactFacetManager>
+                <AllFacets />
+                <AllCategoryFacet />
+                <AllNumericFacets />
+                <AllDateFacets />
+              </ReactFacetManager>
+            </Grid>
+
+            <Grid item xs={9} className="columnResultList">
+              <div className="row">
+                <ReactBreadCrumb />
+              </div>
+              <Grid container justify="space-between" className="querySummaryClass">
+                <Grid item>
+                  <ReactQuerySummary />
+                </Grid>
+                <Grid item>
+                  <ReactSortCheckbox />
+                </Grid>
+              </Grid>
+              <div className="resultListClass">
+                <ReactResultList />
+              </div>
+              <Grid container justify="space-between">
+                <Grid item className="pagerClass">
+                  <ReactPager />
+                </Grid>
+                <Grid item className="resultPerPageClass">
+                  <ReactResultPerPage />
+                </Grid>
+              </Grid>
+            </Grid>
+
+          </Grid>
+        </Container>
       </React.Fragment>
     );
   }

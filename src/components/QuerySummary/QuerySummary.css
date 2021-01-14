@@ -1,4 +1,9 @@
 .bold {
   font-weight: bold;
-  font-size: 16px;
+  font-size: small;
+}
+
+.results {
+  font-size: small !important;
+  color: #67768b;
 }
