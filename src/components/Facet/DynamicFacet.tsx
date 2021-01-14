@@ -82,7 +82,7 @@ class DynamicFacet extends React.Component<ICheckboxControlProps> {
             this.headlessFacet.showMoreValues();
           }}
         >
-          + Show more Facets
+          + Show more facets
         </Link>
         </div>
       );
@@ -99,7 +99,7 @@ class DynamicFacet extends React.Component<ICheckboxControlProps> {
             this.headlessFacet.showLessValues();
           }}
         >
-          - Show Less Facets
+          - Show less facets
         </Link>
       );
     } else {
@@ -213,8 +213,8 @@ class DynamicFacet extends React.Component<ICheckboxControlProps> {
         {this.facetSearchBox()}
         {this.desellectAllFacet()}
         <FormGroup> {this.allFacetValues()}</FormGroup>
-        {this.showMoreFacetButton()}
         {this.showLessFacetButton()}
+        {this.showMoreFacetButton()}
       </div>
     );
   }

@@ -53,7 +53,6 @@ export default class App extends React.Component {
                 <AllFacets />
                 <AllCategoryFacet />
                 <AllNumericFacets />
-                <AllDateFacets />
               </ReactFacetManager>
             </Grid>
 
