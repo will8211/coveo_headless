@@ -11,7 +11,7 @@ import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import { generateRandomString } from "../Facet/CategoryFacet";
 
-const defaultValue = [5, 25, 50, 100];
+const defaultValue = [10, 25, 50, 100];
 
 export default class ReactResultPerPage extends React.Component {
   state!: ResultsPerPageState;
