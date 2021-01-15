@@ -42,7 +42,7 @@ export default class App extends React.Component {
             </div>
           </Container>
 
-          <Grid container className="row">
+          <Grid container spacing={3} className="row">
 
             <Grid item xs={3} className="columnFacet">
               <ReactFacetManager>

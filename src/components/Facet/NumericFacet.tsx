@@ -33,17 +33,14 @@ class ReactNumericFacet extends React.Component<INumericFacetOption> {
         buildNumericRange({
           start: 0,
           end: 1000
-          // endInclusive: false,
         }),
         buildNumericRange({
           start: 1001,
           end: 10000
-          // endInclusive: false,
         }),
         buildNumericRange({
           start: 10001,
           end: 10000
-          // endInclusive: false,
         })
       ]
     };
@@ -93,7 +90,7 @@ class ReactNumericFacet extends React.Component<INumericFacetOption> {
   render() {
     return (
       <div>
-        <h3>NumericFacet - {this.props.facetId}</h3>
+        <h3>{this.props.facetId}</h3>
         <FormGroup row> {this.allNumericFacetValues()}</FormGroup>
       </div>
     );
@@ -105,13 +102,8 @@ export default class AllNumericFacets extends React.Component {
     return (
       <div>
         <ReactNumericFacet
-          field="size"
-          facetId="Size"
-          generateAutomaticRanges={true}
-        />
-        <ReactNumericFacet
           field="ytviewcount"
-          facetId="YouTubeViewCount"
+          facetId="YouTube_View_Count"
           generateAutomaticRanges={false}
         />
       </div>
