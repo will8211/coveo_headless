@@ -19,7 +19,7 @@ export default class ReactResultPerPage extends React.Component {
 
   constructor(props: any) {
     super(props);
-    const initialState: ResultsPerPageInitialState = { numberOfResults: 5};
+    const initialState: ResultsPerPageInitialState = { numberOfResults: 10};
     this.headlessResultPerPage = buildResultsPerPage(engine, { initialState });
     this.state = this.headlessResultPerPage.state;
   }
