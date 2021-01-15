@@ -7,7 +7,6 @@ import {
   buildResultList,
   ResultList,
   ResultListState,
-  //AnalyticsActions,
   ResultAnalyticsActions,
   ResultTemplatesHelpers,
   ResultTemplatesManager,
@@ -15,8 +14,6 @@ import {
   buildResultTemplatesManager
 } from "@coveo/headless";
 import { generateRandomString } from "../Facet/CategoryFacet";
-import Button from "@material-ui/core/Button";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
 
 export default class ReactResultList extends React.Component {
   state!: ResultListState;

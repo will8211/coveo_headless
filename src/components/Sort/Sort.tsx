@@ -1,5 +1,5 @@
-import "./Sort.css";
 import React from "react";
+import "./Sort.css";
 import { engine } from "../../engine";
 import {
   Sort,

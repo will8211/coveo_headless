@@ -5,7 +5,6 @@ import { engine } from "./engine";
 import AllTabs from "./components/Tab/Tab";
 import ReactFacetManager from "./components/Facet/FacetManager";
 import AllFacets from "./components/Facet/DynamicFacet";
-import AllDateFacets from "./components/Facet/DateFacet";
 import ReactSearchBox from "./components/SearchBox/SearchBox";
 import ReactResultList from "./components/ResultList/ResultList";
 import ReactSortCheckbox from "./components/Sort/SortCheckbox";
@@ -14,13 +13,10 @@ import ReactResultPerPage from "./components/ResultPerPage/ResultPerPage";
 import ReactQuerySummary from "./components/QuerySummary/QuerySummary";
 import AllNumericFacets from "./components/Facet/NumericFacet";
 import AllCategoryFacet from "./components/Facet/CategoryFacet";
-import ReactQueryError from "./components/QueryError/QueryError";
 import ReactDidYouMean from "./components/DidYouMean/DidYouMean";
 import ReactBreadCrumb from "./components/Breadcrumb/Breadcrumb";
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import ReactHistory from "./components/History/History";
-
 
 
 export default class App extends React.Component {

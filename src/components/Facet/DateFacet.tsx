@@ -1,17 +1,15 @@
 import React from "react";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox /*, { CheckboxProps } */ from "@material-ui/core/Checkbox";
+import Checkbox from "@material-ui/core/Checkbox";
 import {
   buildDateFacet,
   buildDateRange,
   DateFacet,
   DateFacetOptions,
   DateFacetState,
-  // NumericFacetValue
 } from "@coveo/headless";
 import { engine } from "../../engine";
-// import { start } from "repl";
 
 interface IDateRange {
   facetId: string;

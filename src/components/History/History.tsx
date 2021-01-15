@@ -1,9 +1,10 @@
 import React from "react";
 import { engine } from "../../engine";
 import { buildHistory, HistoryState, History } from "@coveo/headless";
+import { generateRandomString } from "../Facet/CategoryFacet";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
-import { generateRandomString } from "../Facet/CategoryFacet";
+
 
 export default class ReactHistory extends React.Component {
   state!: HistoryState;
